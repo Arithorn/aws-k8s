@@ -7,3 +7,6 @@ resource "aws_instance" "example" {
   key_name = "eu-w-2-terraform"
   count = 3
 }
+output "instance_ips" {
+  value = ["${aws_instance.web.*.public_ip}"]
+}
