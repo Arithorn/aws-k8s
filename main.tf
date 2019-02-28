@@ -5,6 +5,8 @@ resource "aws_spot_instance_request" "k8s-master" {
   ami           = "ami-00035f41c82244dab"
   instance_type = "t3.small"
   wait_for_fulfillment = true
+  key_name = "eu-w-2-terraform"
+  user_data = "${file("worker.conf")}"
   tags = {
     Name = "master"
   }
