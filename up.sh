@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 #Plan Environment
 terraform plan -out plan.out
 #Create Environment

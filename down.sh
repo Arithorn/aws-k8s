@@ -1,3 +1,3 @@
-#!/usr/bin/bash
+#!/bin/bash
 #Destroy Environment
 terraform destroy -auto-approve 
