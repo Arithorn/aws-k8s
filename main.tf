@@ -29,7 +29,7 @@ resource "aws_instance" "k8s-worker" {
   }
 }
 output "master_ips" {
-  value = ["${aws_instance.k8s-master.*.public_ip}"]
+  value = ["${aws_spot_instance_request.k8s-master.*.public_ip}"]
 }
 output "worker_ips" {
   value = ["${aws_instance.k8s-worker.*.public_ip}"]
